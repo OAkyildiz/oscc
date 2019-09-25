@@ -18,7 +18,7 @@
 #include "steering_control.h"
 #include "vehicles.h"
 
-
+uint8_t printval=1;
 
 
 static void read_torque_sensor(
@@ -146,6 +146,11 @@ void update_steering(
 
 void enable_control( void )
 {
+
+    #ifdef DEBUG 
+        printval=1;
+    #endif
+    
     if( g_steering_control_state.enabled == false
         && g_steering_control_state.operator_override == false )
     {
@@ -171,6 +176,10 @@ void disable_control( void )
 {
     if( g_steering_control_state.enabled == true )
     {
+        #ifdef DEBUG 
+                printval=0;
+        #endif
+        
         const uint16_t num_samples = 20;
         prevent_signal_discontinuity(
             g_dac,
@@ -212,10 +221,11 @@ static void read_torque_sensor(
     //DEBUG_PRINTLN(report);
     
     //Ugly arduino version 
-    DEBUG_PRINT("Steering - In A: ");
-    DEBUG_PRINT(value->high);
-    DEBUG_PRINT(" B: ");
-    DEBUG_PRINTLN(value->low);
-
+    if(printval){
+        DEBUG_PRINT("Steering - In A: ");
+        DEBUG_PRINT(value->high);
+        DEBUG_PRINT(" B: ");
+        DEBUG_PRINTLN(value->low);
+    }
     sei();
 }

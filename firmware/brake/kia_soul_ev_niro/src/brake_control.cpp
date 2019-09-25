@@ -19,6 +19,7 @@
 
 
 
+uint8_t printval = 1;
 
 static void read_brake_pedal_position_sensor(
     brake_pedal_position_s * const value );
@@ -63,6 +64,8 @@ void check_for_faults( void )
         if( inputs_grounded == true )
         {
             disable_control( );
+ 
+     
 
             DTC_SET(
                 g_brake_control_state.dtcs,
@@ -88,6 +91,7 @@ void check_for_faults( void )
         }
         else
         {
+
             g_brake_control_state.dtcs = 0;
 
             g_brake_control_state.operator_override = false;
@@ -138,6 +142,10 @@ void update_brake(
 
 void enable_control( void )
 {
+    #ifdef DEBUG 
+        printval=1;
+    #endif
+    
     if( g_brake_control_state.enabled == false
         && g_brake_control_state.operator_override == false )
     {
@@ -163,6 +171,10 @@ void disable_control( void )
 {
     if( g_brake_control_state.enabled == true )
     {
+        #ifdef DEBUG 
+                printval=0;
+        #endif
+            
         const uint16_t num_samples = 20;
         prevent_signal_discontinuity(
             g_dac,
@@ -194,10 +206,12 @@ static void read_brake_pedal_position_sensor(
     //DEBUG_PRINTLN(report);
 
     //Ugly arduino version 
-    DEBUG_PRINT("Brake - In A: ");
-    DEBUG_PRINT(value->high);
-    DEBUG_PRINT(" B: ");
-    DEBUG_PRINTLN(value->low);
 
+    if (printval){
+        DEBUG_PRINT("Brake - In A: ");
+        DEBUG_PRINT(value->high);
+        DEBUG_PRINT(" B: ");
+        DEBUG_PRINTLN(value->low);
+    }
     sei();
 }

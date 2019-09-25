@@ -17,6 +17,8 @@
 #include "throttle_control.h"
 #include "vehicles.h"
 
+uint8_t printval=1;
+
 
 static void read_accelerator_position_sensor(
     accelerator_position_s * const value );
@@ -127,6 +129,11 @@ void update_throttle(
 
 void enable_control( void )
 {
+    // This flag does not care abouty the enable check, it will be turned off if the moduel is disabled anyways
+    #ifdef DEBUG 
+        printval=1;
+    #endif
+
     if( g_throttle_control_state.enabled == false
         && g_throttle_control_state.operator_override == false )
     {
@@ -153,6 +160,9 @@ void disable_control( void )
 {
     if( g_throttle_control_state.enabled == true )
     {
+        #ifdef DEBUG 
+                printval=0;
+        #endif
         const uint16_t num_samples = 20;
 
         prevent_signal_discontinuity(
@@ -186,10 +196,12 @@ static void read_accelerator_position_sensor(
 
     
     //Ugly arduino version 
-    DEBUG_PRINT("Throttle - In A: ");
-    DEBUG_PRINT(value->high);
-    DEBUG_PRINT(" B: ");
-    DEBUG_PRINTLN(value->low);
+    if (printval){
+        DEBUG_PRINT("Throttle - In A: ");
+        DEBUG_PRINT(value->high);
+        DEBUG_PRINT(" B: ");
+        DEBUG_PRINTLN(value->low);
+    }
 
     sei();
 }
