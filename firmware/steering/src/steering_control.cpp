@@ -214,7 +214,7 @@ static void read_torque_sensor(
     //Ugly arduino version 
     DEBUG_PRINT("Steering - In A: ");
     DEBUG_PRINT(value->high);
-    DEBUG_PRINT("B:");
+    DEBUG_PRINT(" B: ");
     DEBUG_PRINTLN(value->low);
 
     sei();

@@ -188,7 +188,7 @@ static void read_accelerator_position_sensor(
     //Ugly arduino version 
     DEBUG_PRINT("Throttle - In A: ");
     DEBUG_PRINT(value->high);
-    DEBUG_PRINT("B:");
+    DEBUG_PRINT(" B: ");
     DEBUG_PRINTLN(value->low);
 
     sei();

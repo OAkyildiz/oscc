@@ -196,7 +196,7 @@ static void read_brake_pedal_position_sensor(
     //Ugly arduino version 
     DEBUG_PRINT("Brake - In A: ");
     DEBUG_PRINT(value->high);
-    DEBUG_PRINT("B:");
+    DEBUG_PRINT(" B: ");
     DEBUG_PRINTLN(value->low);
 
     sei();
