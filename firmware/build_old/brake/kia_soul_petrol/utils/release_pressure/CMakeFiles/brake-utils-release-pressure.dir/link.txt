@@ -1,0 +1,1 @@
+/usr/bin/avr-g++   -g -Os        -fno-exceptions  -Wl,--gc-sections -lm -mmcu=atmega2560  CMakeFiles/brake-utils-release-pressure.dir/brake-utils-release-pressure_release_pressure.ino.cpp.obj  -o brake-utils-release-pressure.elf  ../../libmega.atmega2560_CORE.a -lc -lm 

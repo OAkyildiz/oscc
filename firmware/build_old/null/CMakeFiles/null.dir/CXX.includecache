@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../cmake/../common/libs/arduino_init/arduino_init.h
+
+/home/user/oscc/firmware/common/libs/arduino_init/arduino_init.cpp
+Arduino.h
+-
+arduino_init.h
+/home/user/oscc/firmware/common/libs/arduino_init/arduino_init.h
+
+/home/user/oscc/firmware/common/libs/arduino_init/arduino_init.h
+
+/home/user/oscc/firmware/null/main.cpp
+arduino_init.h
+/home/user/oscc/firmware/null/arduino_init.h
+

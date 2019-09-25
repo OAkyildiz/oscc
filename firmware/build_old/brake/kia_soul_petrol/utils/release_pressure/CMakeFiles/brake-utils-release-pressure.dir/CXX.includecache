@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/oscc/firmware/build/brake/kia_soul_petrol/utils/release_pressure/brake-utils-release-pressure_release_pressure.ino.cpp
+Arduino.h
+/home/user/oscc/firmware/build/brake/kia_soul_petrol/utils/release_pressure/Arduino.h
+

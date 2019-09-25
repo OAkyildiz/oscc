@@ -1,0 +1,316 @@
+The target system is: Arduino -  - 
+The host system is: Linux - 4.15.0-64-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/arduino/hardware/tools/avr/bin/avr-gcc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/myride/myRide/oscc/firmware/build/CMakeFiles/3.5.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/arduino/hardware/tools/avr/bin/avr-g++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/myride/myRide/oscc/firmware/build/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_445b9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_445b9.dir/build.make CMakeFiles/cmTC_445b9.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_445b9.dir/testCCompiler.c.obj
+/opt/arduino/hardware/tools/avr/bin/avr-gcc    -g -Os       -mcall-prologues -ffunction-sections -fdata-sections    -o CMakeFiles/cmTC_445b9.dir/testCCompiler.c.obj   -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_445b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_445b9.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-gcc  -g -Os       -mcall-prologues -ffunction-sections -fdata-sections   -Wl,--gc-sections -lm  CMakeFiles/cmTC_445b9.dir/testCCompiler.c.obj  -o cmTC_445b9  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17ce0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_17ce0.dir/build.make CMakeFiles/cmTC_17ce0.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj
+/opt/arduino/hardware/tools/avr/bin/avr-gcc    -g -Os       -mcall-prologues -ffunction-sections -fdata-sections    -o CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_17ce0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17ce0.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-gcc  -g -Os       -mcall-prologues -ffunction-sections -fdata-sections   -Wl,--gc-sections -lm -v CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj  -o cmTC_17ce0   
+Using built-in specs.
+Reading specs from /opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/device-specs/specs-avr2
+COLLECT_GCC=/opt/arduino/hardware/tools/avr/bin/avr-gcc
+COLLECT_LTO_WRAPPER=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper
+Target: avr
+Configured with: ../gcc/configure --enable-fixed-point --enable-languages=c,c++ --prefix=/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/objdir --disable-nls --disable-libssp --disable-libada --disable-shared --with-avrlibc=yes --with-dwarf2 --disable-doc --target=avr
+Thread model: single
+gcc version 7.3.0 (GCC) 
+COMPILER_PATH=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/bin/
+LIBRARY_PATH=/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/
+COLLECT_GCC_OPTIONS='-g' '-Os' '-mcall-prologues' '-ffunction-sections' '-fdata-sections' '-v' '-o' 'cmTC_17ce0' '-specs=device-specs/specs-avr2'
+ /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/collect2 -plugin /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/liblto_plugin.so -plugin-opt=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7lW0LO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lc -o cmTC_17ce0 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib --gc-sections -lm CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lm -lc --end-group
+COLLECT_GCC_OPTIONS='-g' '-Os' '-mcall-prologues' '-ffunction-sections' '-fdata-sections' '-v' '-o' 'cmTC_17ce0' '-specs=device-specs/specs-avr2'
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(avr-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_17ce0/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_17ce0.dir/build.make CMakeFiles/cmTC_17ce0.dir/build]
+  ignore line: [make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/opt/arduino/hardware/tools/avr/bin/avr-gcc    -g -Os       -mcall-prologues -ffunction-sections -fdata-sections    -o CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_17ce0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17ce0.dir/link.txt --verbose=1]
+  ignore line: [/opt/arduino/hardware/tools/avr/bin/avr-gcc  -g -Os       -mcall-prologues -ffunction-sections -fdata-sections   -Wl,--gc-sections -lm -v CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj  -o cmTC_17ce0   ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Reading specs from /opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/device-specs/specs-avr2]
+  ignore line: [COLLECT_GCC=/opt/arduino/hardware/tools/avr/bin/avr-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper]
+  ignore line: [Target: avr]
+  ignore line: [Configured with: ../gcc/configure --enable-fixed-point --enable-languages=c,c++ --prefix=/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/objdir --disable-nls --disable-libssp --disable-libada --disable-shared --with-avrlibc=yes --with-dwarf2 --disable-doc --target=avr]
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 7.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/bin/]
+  ignore line: [LIBRARY_PATH=/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-g' '-Os' '-mcall-prologues' '-ffunction-sections' '-fdata-sections' '-v' '-o' 'cmTC_17ce0' '-specs=device-specs/specs-avr2']
+  link line: [ /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/collect2 -plugin /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/liblto_plugin.so -plugin-opt=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7lW0LO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lc -o cmTC_17ce0 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib --gc-sections -lm CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lm -lc --end-group]
+    arg [/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc7lW0LO.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lm] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_17ce0] ==> ignore
+    arg [-L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0] ==> dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0]
+    arg [-L/opt/arduino/hardware/tools/avr/bin/../lib/gcc] ==> dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc]
+    arg [-L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib] ==> dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib]
+    arg [--gc-sections] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [CMakeFiles/cmTC_17ce0.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lm] ==> lib [m]
+    arg [-lc] ==> lib [c]
+    arg [--end-group] ==> ignore
+  remove lib [gcc]
+  collapse library dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0] ==> [/opt/arduino/hardware/tools/avr/lib/gcc/avr/7.3.0]
+  collapse library dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc] ==> [/opt/arduino/hardware/tools/avr/lib/gcc]
+  collapse library dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib] ==> [/opt/arduino/hardware/tools/avr/avr/lib]
+  implicit libs: [m;m;c]
+  implicit dirs: [/opt/arduino/hardware/tools/avr/lib/gcc/avr/7.3.0;/opt/arduino/hardware/tools/avr/lib/gcc;/opt/arduino/hardware/tools/avr/avr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_61cc1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_61cc1.dir/build.make CMakeFiles/cmTC_61cc1.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_61cc1.dir/feature_tests.c.obj
+/opt/arduino/hardware/tools/avr/bin/avr-gcc    -g -Os       -mcall-prologues -ffunction-sections -fdata-sections    -std=c11 -o CMakeFiles/cmTC_61cc1.dir/feature_tests.c.obj   -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_61cc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61cc1.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-gcc  -g -Os       -mcall-prologues -ffunction-sections -fdata-sections   -Wl,--gc-sections -lm  CMakeFiles/cmTC_61cc1.dir/feature_tests.c.obj  -o cmTC_61cc1  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cdd62/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cdd62.dir/build.make CMakeFiles/cmTC_cdd62.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cdd62.dir/feature_tests.c.obj
+/opt/arduino/hardware/tools/avr/bin/avr-gcc    -g -Os       -mcall-prologues -ffunction-sections -fdata-sections    -std=c99 -o CMakeFiles/cmTC_cdd62.dir/feature_tests.c.obj   -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_cdd62
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdd62.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-gcc  -g -Os       -mcall-prologues -ffunction-sections -fdata-sections   -Wl,--gc-sections -lm  CMakeFiles/cmTC_cdd62.dir/feature_tests.c.obj  -o cmTC_cdd62  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2ae7a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2ae7a.dir/build.make CMakeFiles/cmTC_2ae7a.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2ae7a.dir/feature_tests.c.obj
+/opt/arduino/hardware/tools/avr/bin/avr-gcc    -g -Os       -mcall-prologues -ffunction-sections -fdata-sections    -std=c90 -o CMakeFiles/cmTC_2ae7a.dir/feature_tests.c.obj   -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2ae7a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ae7a.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-gcc  -g -Os       -mcall-prologues -ffunction-sections -fdata-sections   -Wl,--gc-sections -lm  CMakeFiles/cmTC_2ae7a.dir/feature_tests.c.obj  -o cmTC_2ae7a  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_96f7f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96f7f.dir/build.make CMakeFiles/cmTC_96f7f.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_96f7f.dir/testCXXCompiler.cxx.obj
+/opt/arduino/hardware/tools/avr/bin/avr-g++     -g -Os        -fno-exceptions    -o CMakeFiles/cmTC_96f7f.dir/testCXXCompiler.cxx.obj -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_96f7f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96f7f.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-g++   -g -Os        -fno-exceptions   -Wl,--gc-sections -lm  CMakeFiles/cmTC_96f7f.dir/testCXXCompiler.cxx.obj  -o cmTC_96f7f  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d9b79/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d9b79.dir/build.make CMakeFiles/cmTC_d9b79.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj
+/opt/arduino/hardware/tools/avr/bin/avr-g++     -g -Os        -fno-exceptions    -o CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_d9b79
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9b79.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-g++   -g -Os        -fno-exceptions   -Wl,--gc-sections -lm -v CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTC_d9b79   
+Using built-in specs.
+Reading specs from /opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/device-specs/specs-avr2
+COLLECT_GCC=/opt/arduino/hardware/tools/avr/bin/avr-g++
+COLLECT_LTO_WRAPPER=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper
+Target: avr
+Configured with: ../gcc/configure --enable-fixed-point --enable-languages=c,c++ --prefix=/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/objdir --disable-nls --disable-libssp --disable-libada --disable-shared --with-avrlibc=yes --with-dwarf2 --disable-doc --target=avr
+Thread model: single
+gcc version 7.3.0 (GCC) 
+COMPILER_PATH=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/bin/
+LIBRARY_PATH=/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/
+COLLECT_GCC_OPTIONS='-g' '-Os' '-fno-exceptions' '-v' '-o' 'cmTC_d9b79' '-specs=device-specs/specs-avr2'
+ /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/collect2 -plugin /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/liblto_plugin.so -plugin-opt=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5zFhtq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lc -o cmTC_d9b79 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib --gc-sections CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj -lgcc -lm --start-group -lgcc -lm -lc --end-group
+COLLECT_GCC_OPTIONS='-g' '-Os' '-fno-exceptions' '-v' '-o' 'cmTC_d9b79' '-specs=device-specs/specs-avr2'
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(avr-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d9b79/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d9b79.dir/build.make CMakeFiles/cmTC_d9b79.dir/build]
+  ignore line: [make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [/opt/arduino/hardware/tools/avr/bin/avr-g++     -g -Os        -fno-exceptions    -o CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_d9b79]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9b79.dir/link.txt --verbose=1]
+  ignore line: [/opt/arduino/hardware/tools/avr/bin/avr-g++   -g -Os        -fno-exceptions   -Wl,--gc-sections -lm -v CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTC_d9b79   ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Reading specs from /opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/device-specs/specs-avr2]
+  ignore line: [COLLECT_GCC=/opt/arduino/hardware/tools/avr/bin/avr-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper]
+  ignore line: [Target: avr]
+  ignore line: [Configured with: ../gcc/configure --enable-fixed-point --enable-languages=c,c++ --prefix=/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/objdir --disable-nls --disable-libssp --disable-libada --disable-shared --with-avrlibc=yes --with-dwarf2 --disable-doc --target=avr]
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 7.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/bin/]
+  ignore line: [LIBRARY_PATH=/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/:/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-g' '-Os' '-fno-exceptions' '-v' '-o' 'cmTC_d9b79' '-specs=device-specs/specs-avr2']
+  link line: [ /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/collect2 -plugin /opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/liblto_plugin.so -plugin-opt=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5zFhtq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lc -o cmTC_d9b79 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0 -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc -L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib --gc-sections CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj -lgcc -lm --start-group -lgcc -lm -lc --end-group]
+    arg [/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/arduino/hardware/tools/avr/bin/../libexec/gcc/avr/7.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc5zFhtq.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lm] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_d9b79] ==> ignore
+    arg [-L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0] ==> dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0]
+    arg [-L/opt/arduino/hardware/tools/avr/bin/../lib/gcc] ==> dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc]
+    arg [-L/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib] ==> dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib]
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_d9b79.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lm] ==> lib [m]
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lm] ==> lib [m]
+    arg [-lc] ==> lib [c]
+    arg [--end-group] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc]
+  collapse library dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0] ==> [/opt/arduino/hardware/tools/avr/lib/gcc/avr/7.3.0]
+  collapse library dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc] ==> [/opt/arduino/hardware/tools/avr/lib/gcc]
+  collapse library dir [/opt/arduino/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib] ==> [/opt/arduino/hardware/tools/avr/avr/lib]
+  implicit libs: [m;m;c]
+  implicit dirs: [/opt/arduino/hardware/tools/avr/lib/gcc/avr/7.3.0;/opt/arduino/hardware/tools/avr/lib/gcc;/opt/arduino/hardware/tools/avr/avr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_77eb7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_77eb7.dir/build.make CMakeFiles/cmTC_77eb7.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_77eb7.dir/feature_tests.cxx.obj
+/opt/arduino/hardware/tools/avr/bin/avr-g++     -g -Os        -fno-exceptions    -std=c++14 -o CMakeFiles/cmTC_77eb7.dir/feature_tests.cxx.obj -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_77eb7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77eb7.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-g++   -g -Os        -fno-exceptions   -Wl,--gc-sections -lm  CMakeFiles/cmTC_77eb7.dir/feature_tests.cxx.obj  -o cmTC_77eb7  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0e180/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0e180.dir/build.make CMakeFiles/cmTC_0e180.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0e180.dir/feature_tests.cxx.obj
+/opt/arduino/hardware/tools/avr/bin/avr-g++     -g -Os        -fno-exceptions    -std=c++11 -o CMakeFiles/cmTC_0e180.dir/feature_tests.cxx.obj -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0e180
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e180.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-g++   -g -Os        -fno-exceptions   -Wl,--gc-sections -lm  CMakeFiles/cmTC_0e180.dir/feature_tests.cxx.obj  -o cmTC_0e180  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dc5d4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dc5d4.dir/build.make CMakeFiles/cmTC_dc5d4.dir/build
+make[1]: Entering directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dc5d4.dir/feature_tests.cxx.obj
+/opt/arduino/hardware/tools/avr/bin/avr-g++     -g -Os        -fno-exceptions    -std=c++98 -o CMakeFiles/cmTC_dc5d4.dir/feature_tests.cxx.obj -c /home/myride/myRide/oscc/firmware/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_dc5d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc5d4.dir/link.txt --verbose=1
+/opt/arduino/hardware/tools/avr/bin/avr-g++   -g -Os        -fno-exceptions   -Wl,--gc-sections -lm  CMakeFiles/cmTC_dc5d4.dir/feature_tests.cxx.obj  -o cmTC_dc5d4  
+make[1]: Leaving directory '/home/myride/myRide/oscc/firmware/build/CMakeFiles/CMakeTmp'
+
+
