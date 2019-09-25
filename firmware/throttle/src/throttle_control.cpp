@@ -29,10 +29,21 @@ void check_for_faults( void )
 
     accelerator_position_s accelerator_position;
 
+    // Always read if debug is on
+    #ifdef DEBUG
+        read_accelerator_position_sensor( &accelerator_position );
+    #else
+    #endif
+
+
     if ( ( g_throttle_control_state.enabled == true )
         || (g_throttle_control_state.dtcs > 0) )
     {
+
+    #ifdef DEBUG
+    #else
         read_accelerator_position_sensor( &accelerator_position );
+    #endif
 
         uint32_t accelerator_position_average =
             (accelerator_position.low + accelerator_position.high) / 2;
@@ -167,5 +178,10 @@ static void read_accelerator_position_sensor(
     cli();
     value->high = analogRead( PIN_ACCELERATOR_POSITION_SENSOR_HIGH );
     value->low = analogRead( PIN_ACCELERATOR_POSITION_SENSOR_LOW );
+    
+    char report [34];
+    printf(report, "Throttle - In A: %d B: %d",value->high, value->low );
+    DEBUG_PRINTLN(report);
+
     sei();
 }

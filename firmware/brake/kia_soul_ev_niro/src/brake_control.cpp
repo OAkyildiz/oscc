@@ -31,10 +31,20 @@ void check_for_faults( void )
 
     brake_pedal_position_s brake_pedal_position;
 
+        // Always read if debug is on
+        #ifdef DEBUG
+            read_brake_pedal_position_sensor( &brake_pedal_position );        
+        #else
+        #endif
+
+
     if ( (g_brake_control_state.enabled == true)
         || (g_brake_control_state.dtcs > 0) )
     {
-        read_brake_pedal_position_sensor( &brake_pedal_position );
+        #ifdef DEBUG
+        #else
+            read_brake_pedal_position_sensor( &brake_pedal_position );
+        #endif
 
         uint32_t brake_pedal_position_average =
             (brake_pedal_position.low + brake_pedal_position.high) / 2;
@@ -178,5 +188,9 @@ static void read_brake_pedal_position_sensor(
     cli();
     value->high = analogRead( PIN_BRAKE_PEDAL_POSITION_SENSOR_HIGH );
     value->low = analogRead( PIN_BRAKE_PEDAL_POSITION_SENSOR_LOW );
+   
+    char report [32];
+    printf(report, "Brake - In A: %d B: %d",value->high, value->low );
+    DEBUG_PRINTLN(report);
     sei();
 }

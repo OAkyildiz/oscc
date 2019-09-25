@@ -40,10 +40,20 @@ void check_for_faults( void )
 
     steering_torque_s torque;
 
+    // Always read if debug is on
+    #ifdef DEBUG
+        read_torque_sensor(&torque);
+    #else
+    #endif
+
     if ( ( g_steering_control_state.enabled == true )
         || (g_steering_control_state.dtcs > 0) )
     {
+
+    #ifdef DEBUG
+    #else
         read_torque_sensor(&torque);
+    #endif
 
 #ifdef STEERING_OVERRIDE
         uint16_t unfiltered_diff = abs( ( int )torque.high - ( int )torque.low );
@@ -196,5 +206,10 @@ static void read_torque_sensor(
     cli();
     value->high = analogRead( PIN_TORQUE_SENSOR_HIGH ) << 2;
     value->low = analogRead( PIN_TORQUE_SENSOR_LOW ) << 2;
+    
+    char report [35];
+    printf(report, "Steering - In A: %d B: %d",value->high, value->low );
+    DEBUG_PRINTLN(report);
+    
     sei();
 }
