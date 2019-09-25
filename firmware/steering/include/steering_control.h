@@ -12,6 +12,8 @@
 #include <stdint.h>
 
 
+
+
 /**
  * @brief Torque values.
  *
@@ -40,6 +42,7 @@ typedef struct
                                manually turned by operator. */
 
     uint8_t dtcs; /* Bitfield of faults present in the module. */
+    float torque;
 } steering_control_state_s;
 
 
@@ -99,5 +102,5 @@ void enable_control( void );
 // *****************************************************
 void disable_control( void );
 
-
+void update_steering_pid ( void );
 #endif /* _OSCC_STEERING_CONTROL_H_ */

@@ -15,7 +15,7 @@
 #include "oscc_timer.h"
 #include "oscc_can.h"
 #include "oscc_serial.h"
-
+#include "vehicles.h"
 
 void init_globals( void )
 {
@@ -55,6 +55,7 @@ void init_communication_interfaces( void )
     g_control_can.init_Mask( 0, 0, 0x7F0 ); // Filter for 0x0N0 to 0x0NF
     g_control_can.init_Filt( 0, 0, OSCC_THROTTLE_CAN_ID_INDEX );
     g_control_can.init_Filt( 1, 0, OSCC_FAULT_CAN_ID_INDEX );
+
     // Accept only CAN Disable when buffer overflow occurs in buffer 0
     g_control_can.init_Mask( 1, 0, 0x7FF ); // Filter for one CAN ID
     g_control_can.init_Filt( 2, 1, OSCC_THROTTLE_DISABLE_CAN_ID );

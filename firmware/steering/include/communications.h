@@ -47,5 +47,6 @@ void publish_fault_report( void );
 // ****************************************************************************
 void check_for_incoming_message( void );
 
+void apply_torque(float torque_command);
 
 #endif /* _OSCC_STEERING_COMMUNICATIONS_H_ */

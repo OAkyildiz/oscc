@@ -37,6 +37,9 @@ void check_for_module_reports( void );
 //
 // ****************************************************************************
 void republish_obd_frames_to_control_can_bus( void );
-
+void process_wheel_speed(uint8_t * data);
+void process_velocity_trajectory(uint8_t * data);
+void send_throttle( float throttle );
+void send_brake( float brake );
 
 #endif /* _OSCC_CAN_GATEWAY_COMMUNICATIONS_H_ */

@@ -338,6 +338,9 @@ typedef struct
             ((TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_SCALE * (torque))\
             + TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_OFFSET))
 
+#define STEERING_VOLTS_HIGH_TO_TORQUE( volts ) (\
+            ((volts / STEPS_PER_VOLT) - TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_OFFSET) / TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_SCALE)
+
 /*
  * @brief Calculation to convert a steering torque to a low spoof value.
  *

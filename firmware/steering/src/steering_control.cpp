@@ -7,6 +7,8 @@
 #include <Arduino.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <steering_control.h>
+#include <oscc_pid.h>
 
 #include "can_protocols/steering_can_protocol.h"
 #include "communications.h"
@@ -19,6 +21,7 @@
 #include "vehicles.h"
 
 
+unsigned long last_steering_update_time = 0;
 
 
 static void read_torque_sensor(
@@ -39,11 +42,12 @@ void check_for_faults( void )
     static condition_state_s grounded_fault_state = CONDITION_STATE_INIT;
 
     steering_torque_s torque;
+    read_torque_sensor(&torque);
+    g_steering_control_state.torque = STEERING_VOLTS_HIGH_TO_TORQUE(torque.high);
 
     if ( ( g_steering_control_state.enabled == true )
         || (g_steering_control_state.dtcs > 0) )
     {
-        read_torque_sensor(&torque);
 
 #ifdef STEERING_OVERRIDE
         uint16_t unfiltered_diff = abs( ( int )torque.high - ( int )torque.low );
@@ -197,4 +201,39 @@ static void read_torque_sensor(
     value->high = analogRead( PIN_TORQUE_SENSOR_HIGH ) << 2;
     value->low = analogRead( PIN_TORQUE_SENSOR_LOW ) << 2;
     sei();
+}
+
+void update_steering_pid() {
+  if (new_data)
+  {
+    new_data = 0;
+
+    float delta_t_sec = 0.0;
+    unsigned long curr_time = millis();
+    delta_t_sec = (curr_time - last_steering_update_time)/1000.0;
+
+    if (g_steering_control_state.enabled) {
+        pid_update(&g_steering_pid, setpoint, curr_angle, delta_t_sec, 0.0);
+        apply_torque(g_steering_pid.filtered_control);
+    } else {
+      apply_torque(0.0);
+      pid_zeroize(&g_steering_pid, g_steering_pid.windup_guard);
+    }
+
+  last_steering_update_time = curr_time;
+
+    int dt = (int)(delta_t_sec*1000);
+
+    DEBUG_PRINT(dt);
+    DEBUG_PRINT(",");
+    DEBUG_PRINT(curr_angle);
+    DEBUG_PRINT(",");
+    DEBUG_PRINT(g_steering_pid.control*10);
+    DEBUG_PRINT(",");
+    DEBUG_PRINT(g_steering_pid.prev_input);
+    DEBUG_PRINT(",");
+    DEBUG_PRINT(g_steering_pid.prev_steering_angle);
+    DEBUG_PRINT(",");
+    DEBUG_PRINTLN(setpoint);
+  }
 }

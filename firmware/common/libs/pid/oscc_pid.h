@@ -34,6 +34,8 @@
  */
 typedef struct
 {
+    float min_control;
+    float max_control;
     float windup_guard; /* Windup guard. */
 
     float proportional_gain; /* Proportional gain. */
@@ -41,12 +43,15 @@ typedef struct
     float integral_gain; /* Integral gain. */
 
     float derivative_gain; /* Derivative gain. */
+    float ff_gain;
 
     float prev_input; /* Previous input. */
 
     float int_error; /* Error. */
 
     float control; /* Control. */
+    float filter_rate;
+    float filtered_control;
 
     float prev_steering_angle; /* Previous steering angle. */
 } pid_s;
@@ -66,7 +71,7 @@ typedef struct
 //              [in] dt - differentiation value
 //
 // ****************************************************************************
-int pid_update( pid_s* pid, float setpoint, float input, float dt );
+int pid_update( pid_s* pid, float setpoint, float input, float dt, float ff, bool debug=false);
 
 
 // ****************************************************************************

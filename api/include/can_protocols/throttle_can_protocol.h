@@ -44,6 +44,8 @@
  */
 #define OSCC_THROTTLE_REPORT_CAN_ID (0x93)
 
+#define OSCC_LONG_SPEED_TRAJ_CAN_ID (0x94)
+
 /*
  * @brief Throttle report message (CAN frame) length.
  *
@@ -151,6 +153,15 @@ typedef struct
 
     uint8_t reserved[3]; /*!< Reserved. */
 } oscc_throttle_report_s;
+
+
+typedef struct
+{
+    float target_vel_start;
+    float target_acc_start;
+//    float target_vel_end;
+//    float target_acc_end;
+} oscc_long_speed_traj_s;
 
 #pragma pack(pop)
 

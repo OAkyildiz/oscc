@@ -12,6 +12,8 @@
 #include "DAC_MCP49xx.h"
 #include "mcp_can.h"
 #include "steering_control.h"
+#include "oscc_pid.h"
+#include "oscc_serial.h"
 
 
 /*
@@ -71,6 +73,9 @@
 
 
 EXTERN volatile steering_control_state_s g_steering_control_state;
-
+EXTERN pid_s g_steering_pid;
+EXTERN double setpoint;
+EXTERN double curr_angle;
+EXTERN bool new_data;
 
 #endif

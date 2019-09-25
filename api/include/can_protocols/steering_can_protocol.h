@@ -45,6 +45,12 @@
 #define OSCC_STEERING_REPORT_CAN_ID (0x83)
 
 /*
+ * @brief Steering command angle message (CAN frame) ID.
+ *
+*/
+#define OSCC_STEERING_ANGLE_COMMAND_CAN_ID (0x84)
+
+/*
  * @brief Steering report message (CAN frame) length.
  *
  */
@@ -151,9 +157,10 @@ typedef struct
                                 * Non-zero value means an operator has physically overridden
                                 * the system. */
 
-    uint8_t dtcs; /*!< Bitfield of DTCs present in the module. */
+    //uint8_t dtcs; /*!< Bitfield of DTCs present in the module. */
 
-    uint8_t reserved[3]; /*!< Reserved. */
+    //uint8_t reserved[3]; /*!< Reserved. */
+    float torque_command;
 } oscc_steering_report_s;
 
 #pragma pack(pop)

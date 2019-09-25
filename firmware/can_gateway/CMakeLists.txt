@@ -19,6 +19,7 @@ generate_arduino_firmware(
     ${OSCC_FIRMWARE_ROOT}/common/libs/arduino_init/arduino_init.cpp
     ${OSCC_FIRMWARE_ROOT}/common/libs/mcp_can/mcp_can.cpp
     ${OSCC_FIRMWARE_ROOT}/common/libs/serial/oscc_serial.cpp
+    ${OSCC_FIRMWARE_ROOT}/common/libs/pid/oscc_pid.cpp
     ${OSCC_FIRMWARE_ROOT}/common/libs/can/oscc_can.cpp
     ${OSCC_FIRMWARE_ROOT}/common/libs/timer/oscc_timer.cpp
     ${OSCC_FIRMWARE_ROOT}/common/libs/ssd1325/ssd1325.cpp
@@ -28,7 +29,8 @@ generate_arduino_firmware(
     src/init.cpp
     src/communications.cpp
     src/display.cpp
-    src/timer.cpp)
+    src/timer.cpp
+    src/longitudinal_control.cpp)
 
 target_include_directories(
     can-gateway
@@ -39,6 +41,7 @@ target_include_directories(
     ${OSCC_FIRMWARE_ROOT}/common/libs/mcp_can
     ${OSCC_FIRMWARE_ROOT}/common/libs/serial
     ${OSCC_FIRMWARE_ROOT}/common/libs/can
+    ${OSCC_FIRMWARE_ROOT}/common/libs/pid
     ${OSCC_FIRMWARE_ROOT}/common/libs/timer
     ${OSCC_FIRMWARE_ROOT}/common/libs/ssd1325
     ${OSCC_FIRMWARE_ROOT}/common/libs/ssd1325/gfx

@@ -13,8 +13,11 @@
 #include "ssd1325.h"
 
 #include "display.h"
-
-
+#include "oscc_timer.h"
+#include "oscc_can.h"
+#include "oscc_serial.h"
+#include "vehicles.h"
+#include "oscc_pid.h"
 /*
  * @brief Chip select pin of the OBD CAN IC.
  *
@@ -52,6 +55,12 @@
 
 
 EXTERN kia_soul_gateway_display_state_s g_display_state;
+EXTERN pid_s g_long_pid;
+EXTERN oscc_long_speed_traj_s g_speed_trajectory;
+EXTERN unsigned long g_last_trajectory_update_time;
+EXTERN double g_curr_speed;
+EXTERN bool g_new_data;
+EXTERN unsigned long g_last_long_update_time;
 
 
 
