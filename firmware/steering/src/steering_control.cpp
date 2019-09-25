@@ -207,9 +207,15 @@ static void read_torque_sensor(
     value->high = analogRead( PIN_TORQUE_SENSOR_HIGH ) << 2;
     value->low = analogRead( PIN_TORQUE_SENSOR_LOW ) << 2;
     
-    char report [35];
-    printf(report, "Steering - In A: %d B: %d",value->high, value->low );
-    DEBUG_PRINTLN(report);
+    //char report [35];
+    //printf(report, "Steering - In A: %d B: %d",value->high, value->low );
+    //DEBUG_PRINTLN(report);
     
+    //Ugly arduino version 
+    DEBUG_PRINT("Steering - In A: ");
+    DEBUG_PRINT(value->high);
+    DEBUG_PRINT("B:");
+    DEBUG_PRINTLN(value->low);
+
     sei();
 }

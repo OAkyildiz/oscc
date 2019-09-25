@@ -189,8 +189,15 @@ static void read_brake_pedal_position_sensor(
     value->high = analogRead( PIN_BRAKE_PEDAL_POSITION_SENSOR_HIGH );
     value->low = analogRead( PIN_BRAKE_PEDAL_POSITION_SENSOR_LOW );
    
-    char report [32];
-    printf(report, "Brake - In A: %d B: %d",value->high, value->low );
-    DEBUG_PRINTLN(report);
+    //char report [40];
+    //printf(report, "Brake - In A: %d B: %d",value->high, value->low );
+    //DEBUG_PRINTLN(report);
+
+    //Ugly arduino version 
+    DEBUG_PRINT("Brake - In A: ");
+    DEBUG_PRINT(value->high);
+    DEBUG_PRINT("B:");
+    DEBUG_PRINTLN(value->low);
+
     sei();
 }

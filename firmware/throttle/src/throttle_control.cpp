@@ -179,9 +179,17 @@ static void read_accelerator_position_sensor(
     value->high = analogRead( PIN_ACCELERATOR_POSITION_SENSOR_HIGH );
     value->low = analogRead( PIN_ACCELERATOR_POSITION_SENSOR_LOW );
     
-    char report [34];
-    printf(report, "Throttle - In A: %d B: %d",value->high, value->low );
-    DEBUG_PRINTLN(report);
+    // ? I re-wrote this and made an error. Probably buffer size
+    // char report [34];
+    // printf(report, "Throttle - In A: %d B: %d",value->high, value->low );
+    // DEBUG_PRINTLN(report);
+
+    
+    //Ugly arduino version 
+    DEBUG_PRINT("Throttle - In A: ");
+    DEBUG_PRINT(value->high);
+    DEBUG_PRINT("B:");
+    DEBUG_PRINTLN(value->low);
 
     sei();
 }
