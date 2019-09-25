@@ -1,3 +1,0 @@
-/home/user/myRide/oscc/utils/diagnostics_tool/build/CMakeFiles/rebuild_cache.dir
-/home/user/myRide/oscc/utils/diagnostics_tool/build/CMakeFiles/edit_cache.dir
-/home/user/myRide/oscc/utils/diagnostics_tool/build/CMakeFiles/diagnostics-tool.dir

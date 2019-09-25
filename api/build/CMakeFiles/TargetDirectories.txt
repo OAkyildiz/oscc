@@ -1,5 +1,0 @@
-/home/oakyildiz/workspaces/myRide/oscc/api/build/CMakeFiles/edit_cache.dir
-/home/oakyildiz/workspaces/myRide/oscc/api/build/CMakeFiles/rebuild_cache.dir
-/home/oakyildiz/workspaces/myRide/oscc/api/build/CMakeFiles/osccapi_objects.dir
-/home/oakyildiz/workspaces/myRide/oscc/api/build/CMakeFiles/osccapi_static_lib.dir
-/home/oakyildiz/workspaces/myRide/oscc/api/build/CMakeFiles/osccapi_shared_lib.dir

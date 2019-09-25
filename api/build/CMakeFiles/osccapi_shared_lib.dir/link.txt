@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC   -shared -Wl,-soname,libosccapi.so -o libosccapi.so CMakeFiles/osccapi_objects.dir/src/oscc.c.o 

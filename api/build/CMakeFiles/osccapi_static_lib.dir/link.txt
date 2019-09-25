@@ -1,2 +1,0 @@
-/usr/bin/ar qc libosccapi.a  CMakeFiles/osccapi_objects.dir/src/oscc.c.o
-/usr/bin/ranlib libosccapi.a
