@@ -23,6 +23,9 @@ int main( void )
 
     start_timers( );
 
+    //Serial.begin(115200);
+    Serial.println("test");
+
     DEBUG_PRINTLN( "init complete" );
 
     while( true )
@@ -30,6 +33,8 @@ int main( void )
 #ifdef __AVR_ATmega32U4__
         RXLED1;
 #endif
+        //Serial.println("bark");
+
         check_for_incoming_message( );
 
         check_for_faults( );
